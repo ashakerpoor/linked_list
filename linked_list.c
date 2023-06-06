@@ -47,7 +47,6 @@ dic_t *create_node (char *str) {
 };
 
 
-// Function #4 of the Challenge.
 // Parse a string and store the words in a linked list.
 dic_t *parse_n_store(char *str) {
         int i = 0;
@@ -78,7 +77,6 @@ dic_t *parse_n_store(char *str) {
 };
 
 
-// Function #5 of the Challenge.
 // This function takes in a pointer to the head of
 // a current linked list and sorts it alphabetically.
 void sortll(dic_t **head) {
@@ -112,7 +110,6 @@ void sortll(dic_t **head) {
 }
 
 
-// Function #6 (and #9) of the Challenge.
 // It takes in the head pointer to a current list,
 // along with a string to compare against each node.
 // The search mode could be case sensitive (smode==1),
@@ -148,7 +145,6 @@ dic_t *search (dic_t *head, char *str, int smode) {
 }
 
 
-// Function #7 of the Challenge.
 // It adds entries to the current linked list alphabetically.
 dic_t *insert_node (dic_t *head, char *str) {
         int i;
@@ -187,7 +183,6 @@ dic_t *insert_node (dic_t *head, char *str) {
 }
 
 
-// Function #8 of the Challenge.
 // It deletes a current linked list at &head.
 void deletell (dic_t **head) {  // we pass a pointer to pointer so we can modify the pointer itself.
         dic_t *p, *q;
@@ -202,8 +197,6 @@ void deletell (dic_t **head) {  // we pass a pointer to pointer so we can modify
 
 
 // This function prints out a linked list.
-// It was not required in the Challenge, but,
-// it is included to print out the output of different functions.
 void printll (dic_t *head) {
         dic_t *temp = head;
         while (temp != NULL) {
