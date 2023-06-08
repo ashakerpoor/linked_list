@@ -251,7 +251,7 @@ printll(p2);
 */
 
 // Uncomment this block if you want to prompt a search.
-// Note that the function returns Null if it does not find a match.
+// Note that the function returns "null" if it does not find a match.
 /*
 printf("Input a word:\n");
 scanf("%s", short_str);
