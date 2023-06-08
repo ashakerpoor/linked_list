@@ -119,7 +119,12 @@ void sortll(dic_t **head) {
 dic_t *search (dic_t *head, char *str, int smode) {
         int i;
         char str_[5] = {};
-        dic_t *p;
+        dic_t *p, *empty, var;
+
+        var.element.wlen = 0;
+        strncpy(var.element.word, "null", 4);
+        var.element.word[4] = '\0';
+        empty = &var;
 
         p = head;
         strncpy(str_, str, 4);
@@ -132,6 +137,7 @@ dic_t *search (dic_t *head, char *str, int smode) {
                         if (i==0) return p;
                         p = p->next;
                 }
+                return empty;
         }
         // if the search mode is case insensitive.
         else{
@@ -140,8 +146,8 @@ dic_t *search (dic_t *head, char *str, int smode) {
                         if (i==0) return p;
                         p = p->next;
                 }
+                return empty;
         }
-        return p; // p returned here will point to a NULL.
 }
 
 
@@ -251,9 +257,7 @@ printf("Input a word:\n");
 scanf("%s", short_str);
 p2 = search(p1, short_str, 1);
 printf("%s %d\n", p2->element.word, p2->element.wlen);
-//printf("%p", (void *) p2);
 */
-
 
 return 0;
 }
